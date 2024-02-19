@@ -1,6 +1,6 @@
 {
   "name": "@lynksen/react-scrolltrigger-reveal",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Easily animate any react elements on scroll with GSAP ScrollTrigger. Zero-config, easy to use.",
   "main": "dist/cjs/bundle.js",
   "module": "dist/esm/bundle.js",
@@ -25,11 +25,10 @@
   "author": "Lynksen",
   "license": "MIT",
   "keywords": [
-    "react-template",
-    "react-library",
-    "typescript",
+    "gsap",
+    "scrolltrigger",
     "react",
-    "template"
+    "animate-on-scroll"
   ],
   "bugs": {
     "url": "https://github.com/Lynksen/react-scrolltrigger-reveal/issues"

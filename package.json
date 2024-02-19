@@ -1,6 +1,6 @@
 {
   "name": "@lynksen/react-scrolltrigger-reveal",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Easily animate any react elements on scroll with GSAP ScrollTrigger. Zero-config, easy to use.",
   "main": "dist/cjs/bundle.js",
   "module": "dist/esm/bundle.js",
@@ -36,7 +36,7 @@
   },
   "homepage": "https://codepen.io/Lynksen",
   "peerDependencies": {
-    "antd": "^5.4.0",
+    "gsap": "^3.12.5",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },

@@ -1,6 +1,5 @@
 # React ScrollTrigger Reveal
 Easily animate (reveal) any React elements on scroll with GSAP ScrollTrigger.  
-Supports custom animation parameters with [gsap.from()](https://gsap.com/docs/v3/GSAP/gsap.from()/).
 
 ## Getting started
 1. Install npm package: `npm install @lynksen/react-scrolltrigger-reveal`
@@ -8,6 +7,18 @@ Supports custom animation parameters with [gsap.from()](https://gsap.com/docs/v3
 3. Place any elements you want to animate on scroll, inside `<RevealOnScroll>`
 
 ## Usage
+
+### 1. Basic Usage
+
+### 2. Advanced
+
+#### 2.1 Custom animation props
+Supports custom animation parameters with [gsap.from()](https://gsap.com/docs/v3/GSAP/gsap.from()/).
+
+#### 2.2 Offset and Stagger
+Control the start of the animation 
+
+## Props
 
 ## Demo
 - Codepen

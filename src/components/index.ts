@@ -1,1 +1,1 @@
-export { default as RevealOnScroll } from "./RevealOnScroll";
+export { default as AnimateOnScroll } from "./AnimateOnScroll";

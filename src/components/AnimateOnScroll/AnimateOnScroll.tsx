@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./RevealOnScroll.css";
+import "./AnimateOnScroll.css";
 
 type AnimateRevealProps = {
   children: React.ReactNode;
@@ -15,7 +15,7 @@ type AnimateRevealProps = {
 };
 
 // ScrollTrigger component for children reveal animation
-const RevealOnScroll = ({
+export default function AnimateOnScroll({
   children,
   YOffset = 80,
   from = { opacity: 0, y: "60%", duration: 0.6, ease: "power2.out" },
@@ -28,7 +28,7 @@ const RevealOnScroll = ({
     return;
   },
   debug = false,
-}: AnimateRevealProps) => {
+}: AnimateRevealProps) {
   const containerRef = useRef(null);
   const revealRef = useRef(null);
 
@@ -71,6 +71,4 @@ const RevealOnScroll = ({
       </div>
     </div>
   );
-};
-
-export default RevealOnScroll;
+}

@@ -5,16 +5,17 @@ interface AnimateOnMountProps {
   children: React.ReactNode;
   mounted: boolean;
   className?: string;
-  from?: gsap.TweenVars;
-  to?: gsap.TweenVars;
+  fromTo?: [gsap.TweenVars, gsap.TweenVars];
 }
 
 export default function AnimateOnMount({
   children,
   mounted,
   className,
-  from = { opacity: 0, y: 200 },
-  to = { opacity: 1, y: 0, duration: 0.5, ease: "sine.out" },
+  fromTo = [
+    { opacity: 0, y: 200 },
+    { opacity: 1, y: 0, duration: 0.5, ease: "sine.out" },
+  ],
 }: AnimateOnMountProps) {
   const [renderElement, setRenderElement] = useState(mounted);
   const elementRef = useRef(null);
@@ -25,10 +26,10 @@ export default function AnimateOnMount({
 
     if (mounted === true) {
       setRenderElement(true);
-      gsap.fromTo(element, from, to);
+      gsap.fromTo(element, fromTo[0], fromTo[1]);
     } else if (mounted === false) {
       gsap
-        .to(element, { ...from, duration: to.duration })
+        .to(element, { ...fromTo[0], duration: fromTo[1].duration })
         .then(() => setRenderElement(false));
     }
   }, [mounted]);

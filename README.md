@@ -20,10 +20,12 @@ Supports all GSAP Tween animation props.
 
 Easily animate conditional rendering (mount/unmount) of any custom elements.
 
-- param {boolean} mounted - Mount/unmount condition.
-- param {Array<Object>} props.fromTo - Animation properties, as in gsap.fromTo().
-- param {string} props.className - The CSS class name for the component.
-- returns {React.ReactElement || null} The rendered component or null.
+Parameters:
+- **mounted** (boolean) - Mount/unmount condition.
+- **fromTo** (gsap.fromToVars) - Animation properties, as in gsap.fromTo().
+- **className** (string) - CSS classname for the component.
+
+Returns: React.ReactElement || null 
 
 ```
 import { AnimateOnMount } from "@lynksen/react-gsap-utils";
@@ -32,7 +34,7 @@ import { AnimateOnMount } from "@lynksen/react-gsap-utils";
     mounted={condition}
     fromTo={[
       { opacity: 0, y: "60%" },
-      { opacity: 1, y: "0%" },
+      { opacity: 1, y: "0%", duration: 1 },
     ]}
 >
    <div>Animating mount and unmount on condition change</div>
@@ -43,15 +45,17 @@ import { AnimateOnMount } from "@lynksen/react-gsap-utils";
 
 Zero-config ScrollTrigger component for children reveal animation.
 
-- @param children - The content to be animated.
-- @param int YOffset - The offset in percentage from the top of the viewport where the animation should start.
-- @param from - The initial animation properties (as in gsap.from())
-- @param string className - Additional class name for the container.
-- @param childClassName - Additional class name for the child element.
-- @param onComplete - Callback function to be called when the animation completes.
-- @param onStart - Callback function to be called when the animation starts.
-- @param debug - Whether to show debug markers.
-- returns {React.ReactElement} The rendered component.
+Parameters:
+- **children** - The content to be animated.
+- **YOffset** (int) - The offset in percentage from the top of the viewport where the animation should start.
+- **from** (gsap.fromVars) - The initial animation properties (as in gsap.from())
+- **className** (string) - CSS classname for the container.
+- **childClassName** (string) - CSS classname for the child element.
+- **onComplete** (function) - Callback function to be called when the animation completes.
+- **onStart** (function) - Callback function to be called when the animation starts.
+- **debug** (boolean) - Whether to show debug markers.
+
+Returns: React.ReactElement
 
 ```
 import { AnimateOnScroll } from "@lynksen/react-gsap-utils";

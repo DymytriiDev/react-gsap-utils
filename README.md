@@ -18,18 +18,12 @@ Supports all GSAP Tween animation props.
 
 ### 1. Animate On Mount
 
-Easily animate any custom elements mount/unmount based on conditional rendering.
+Easily animate conditional rendering (mount/unmount) of any custom elements.
 
-- param {Object} props - The component props.
-- param {React.ReactNode} props.children - The children to be animated.
-- param {boolean} props.mounted - Determines whether the component is mounted or not.
+- param {boolean} mounted - Mount/unmount condition.
+- param {Array<Object>} props.fromTo - Animation properties, as in gsap.fromTo().
 - param {string} props.className - The CSS class name for the component.
-- param {Array<Object>} props.fromTo - The animation configuration for the component.
-- param {number} props.fromTo[].opacity - The initial opacity value.
-- param {number} props.fromTo[].y - The initial y-axis position.
-- param {number} props.fromTo[].duration - The duration of the animation.
-- param {string} props.fromTo[].ease - The easing function for the animation.
-- returns {React.ReactElement} The rendered component.
+- returns {React.ReactElement || null} The rendered component or null.
 
 ```
 import { AnimateOnMount } from "@lynksen/react-gsap-utils";
@@ -41,15 +35,13 @@ import { AnimateOnMount } from "@lynksen/react-gsap-utils";
       { opacity: 1, y: "0%" },
     ]}
 >
-  <YourCustomElement>
-   <p>Animating mount and unmount on condition change</p>
-  </YourCustomElement>
+   <div>Animating mount and unmount on condition change</div>
 </AnimateOnMount>
 ```
 
 ### 2. Animate On Scroll
 
-A no-config ScrollTrigger component for children reveal animation.
+Zero-config ScrollTrigger component for children reveal animation.
 
 - @param children - The content to be animated.
 - @param int YOffset - The offset in percentage from the top of the viewport where the animation should start.
@@ -58,7 +50,8 @@ A no-config ScrollTrigger component for children reveal animation.
 - @param childClassName - Additional class name for the child element.
 - @param onComplete - Callback function to be called when the animation completes.
 - @param onStart - Callback function to be called when the animation starts.
-- @param debug - Whether to show debug markers during animation.
+- @param debug - Whether to show debug markers.
+- returns {React.ReactElement} The rendered component.
 
 ```
 import { AnimateOnScroll } from "@lynksen/react-gsap-utils";

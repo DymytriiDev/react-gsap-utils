@@ -21,7 +21,7 @@ Easily animate conditional rendering (mount/unmount) of any custom elements.
 
 Parameters:
 - **mounted** (boolean) - Mount/unmount condition.
-- **fromTo** (gsap.fromToVars) - Animation properties, as in gsap.fromTo().
+- **fromTo** (gsap.fromToVars) - Animation properties, as in [gsap.fromTo()](https://gsap.com/docs/v3/GSAP/gsap.fromTo()).
 - **className** (string) - CSS classname for the component.
 
 Returns:
@@ -48,7 +48,7 @@ Zero-config ScrollTrigger component for children reveal animation.
 Parameters:
 - **children** - The content to be animated.
 - **YOffset** (int) - The offset in percentage from the top of the viewport where the animation should start.
-- **from** (gsap.fromVars) - The initial animation properties (as in gsap.from())
+- **from** (gsap.fromVars) - The initial animation properties, as in [gsap.from()](https://gsap.com/docs/v3/GSAP/gsap.from())
 - **className** (string) - CSS classname for the container.
 - **childClassName** (string) - CSS classname for the child element.
 - **onComplete** (function) - Callback function to be called when the animation completes.

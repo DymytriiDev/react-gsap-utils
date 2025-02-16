@@ -1,6 +1,6 @@
 {
   "name": "@lynksen/react-gsap-utils",
-  "version": "0.9.7",
+  "version": "0.9.9",
   "description": "Collection of zero-config, drop-in utilities to animate React elements and components using GSAP Tween animation props.",
   "main": "dist/cjs/bundle.js",
   "module": "dist/esm/bundle.js",
@@ -33,7 +33,6 @@
   "bugs": {
     "url": "https://github.com/LynksenDymytrii/react-gsap-utils/issues"
   },
-  "homepage": "https://codepen.io/Lynksen",
   "peerDependencies": {
     "gsap": ">=3.0.1",
     "react": ">=16.8.0",

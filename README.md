@@ -20,12 +20,13 @@ Supports all GSAP Tween animation props.
 Easily animate conditional rendering (mount/unmount) of any custom elements.
 
 Parameters:
+
 - **mounted** (boolean) - Mount/unmount condition.
-- **fromTo** (gsap.fromToVars) - Animation properties, as in [gsap.fromTo()](https://gsap.com/docs/v3/GSAP/gsap.fromTo()).
+- **fromTo** (gsap.fromToVars) - Animation properties, as in [gsap.fromTo()](<https://gsap.com/docs/v3/GSAP/gsap.fromTo()>).
 - **className** (string) - CSS classname for the component.
 
 Returns:
-React.ReactElement || null 
+React.ReactElement || null
 
 ```JSX
 import { AnimateOnMount } from "@lynksen/react-gsap-utils";
@@ -46,9 +47,10 @@ import { AnimateOnMount } from "@lynksen/react-gsap-utils";
 Zero-config ScrollTrigger component for children reveal animation.
 
 Parameters:
+
 - **children** - The content to be animated.
-- **YOffset** (int) - The offset in percentage from the top of the viewport where the animation should start.
-- **from** (gsap.fromVars) - The initial animation properties, as in [gsap.from()](https://gsap.com/docs/v3/GSAP/gsap.from())
+- **YOffset** (int) - The offset in percentage from the top of the viewport where the animation should start. Default value is 80 (80% from the top of the screen).
+- **from** (gsap.fromVars) - The initial animation properties, as in [gsap.from()](<https://gsap.com/docs/v3/GSAP/gsap.from()>). Default value is { opacity: 0, y: "60%", duration: 0.6, ease: "power2.out" }.
 - **className** (string) - CSS classname for the container.
 - **childClassName** (string) - CSS classname for the child element.
 - **onComplete** (function) - Callback function to be called when the animation completes.
